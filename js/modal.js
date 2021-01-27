@@ -27,6 +27,8 @@ function closeModal() {
 }
 
 closeBtn[0].addEventListener("click", closeModal);
+console.log(closeBtn);
+console.log(closeBtn[3]);
 
 
 
