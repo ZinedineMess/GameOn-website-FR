@@ -1,3 +1,4 @@
+// EDIT NAV
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -7,28 +8,23 @@ function editNav() {
   }
 }
 
-// DOM Elements
+// DOM ELEMENTS
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const closeBtn = document.getElementsByClassName('close');
 
-// launch modal event
+// LAUNCH MODAL EVENTS
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
 
-// launch modal form
+// LAUNCH MODAL FORM
 function launchModal() {
   modalbg.style.display = "block";
 }
 
-// close modal 
+// CLOSE MODAL FORM
 function closeModal() {
-  modalbg.style.display = "none";
+  modalbg.style.display = 'none';
 }
 
-closeBtn[0].addEventListener("click", closeModal);
-console.log(closeBtn);
-console.log(closeBtn[3]);
-
-
-
+closeBtn[0].addEventListener('click', closeModal);
