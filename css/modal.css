@@ -27,12 +27,15 @@ p {
 }
 
 img {
-  padding: 0.4rem;
+  padding: 1rem;
 }
 
 .topnav {
   overflow: hidden;
-  padding: 2rem 0;
+  margin: 3.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-logo {
@@ -61,57 +64,19 @@ img {
   border-radius: 0.9375rem;
 }
 
-.topnav a.active {
+.topnav a.focus {
   background-color: #ff0000;
   color: #ffffff;
   border-radius: 0.9375rem;
 }
 
+.topnav a:focus span {
+  border-bottom: 0.13rem solid white;
+}
+
 .topnav .icon {
   display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-
-
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
+  color: #ff0000;
 }
 
 main {
@@ -124,6 +89,7 @@ main {
   margin: 1px 20px 15px;
   border-radius: 2rem;
   text-align: justify;
+  align-items: center;
 }
 
 .modal-btn {
@@ -223,12 +189,12 @@ input {
 
 .formData[data-error]::after {
   content: attr(data-error);
-  font-size: 0.6em;
+  font-size: 0.5em;
   color: #FF4E60;
   display: block;
   margin-top: 7px;
   margin-bottom: 7px;
-  text-align: right;
+  text-align: left;
   line-height: 0.3;
   opacity: 0;
   transition: 0.3s;
@@ -470,9 +436,10 @@ input[data-error]::after {
 }
 
 .hero-headline {
-  font-size: 5rem;
+  font-size: 4em;
   font-weight: normal;
-  width: auto;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .hero-text {
@@ -485,7 +452,7 @@ input[data-error]::after {
 
 .btn-signup {
   outline: none;
-  text-transform: capitalize;
+  text-transform: none;
   font-size: 1.3rem;
   padding: 15px 23px;
   margin: 0;
@@ -521,53 +488,6 @@ footer {
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0 20px;
-}
-
-@media screen and (max-width: 800px) {
-  .hero-section {
-    display: block;
-    box-shadow: unset;
-  }
-
-  .hero-content {
-    background: #fff;
-    color: #000;
-    padding: 20px;
-  }
-
-  .hero-content::after {
-    content: unset;
-  }
-
-  .hero-content .btn-signup {
-    display: none;
-  }
-
-  .hero-headline {
-    font-size: 4.5rem;
-    white-space: normal;
-  }
-
-  .hero-text {
-    width: unset;
-    font-size: 1.5rem;
-  }
-
-  .hero-img img {
-    border-radius: 10px;
-    margin-top: 40px;
-  }
-
-  .hero-section>.btn-signup {
-    display: block;
-    margin: 32px auto 10px;
-    padding: 12px 35px;
-  }
-
-  .copyrights {
-    margin-top: 50px;
-    text-align: center;
-  }
 }
 
 @keyframes modalopen {
@@ -661,4 +581,92 @@ footer {
   padding: 0.75rem 2.5rem;
   border-radius: 1rem;
   cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* MOBILE */
+@media screen and (max-width: 768px) {
+  .topnav {
+    flex-wrap: wrap;
+  }
+
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .header-logo img {
+    width: 150px;
+  }
+
+  .hero-section {
+    display: block;
+    box-shadow: unset;
+  }
+
+  .hero-content {
+    background: #fff;
+    color: #000;
+    padding: 0;
+    min-width: auto;
+  }
+
+  .hero-content::after {
+    content: unset;
+  }
+
+  .hero-content .btn-signup {
+    display: none;
+  }
+
+  .hero-headline {
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 2.5rem;
+    white-space: normal;
+  }
+
+  .hero-text {
+    width: unset;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-img img {
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+
+  .hero-section>.btn-signup {
+    display: block;
+    margin: 32px auto 10px;
+    padding: 12px 35px;
+  }
+
+  .copyrights {
+    margin-top: 50px;
+    text-align: center;
+  }
 }
