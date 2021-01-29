@@ -45,7 +45,7 @@ function editNav() {
 }
 
 // ------ FORM FIELDS VALIDATION ------ //
-// NAMES CHECK
+// NAMES CHECK (FIRST NAME AND LAST NAME)
 function firstName() {
   if (first.value.trim().length < 2 || first.value.trim() === '') {
     first.parentElement.setAttribute('data-error-visible', 'true');

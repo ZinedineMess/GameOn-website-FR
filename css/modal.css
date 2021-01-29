@@ -115,7 +115,7 @@ main {
 }
 
 /* Modal form */
-.button {
+.btn-submit{
   background: #fe142f;
   margin-top: 0.5em;
   padding: 1em;
@@ -125,7 +125,7 @@ main {
   font-size: 16px;
 }
 
-.button:hover {
+.btn-submit:hover {
   background: #3876ac;
 }
 
