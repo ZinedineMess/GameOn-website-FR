@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <div class="topnav" id="myTopnav">
+    <nav class="topnav" id="myTopnav">
       <div class="header-logo">
         <img alt="logo" src="img/Logo.png" />
       </div>
@@ -26,7 +26,7 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-    </div>
+    </nav>
   </header>
 
   <main>
@@ -62,53 +62,54 @@
             <!-- FIRST NAME -->
             <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
               <label for="first">Prénom</label><br>
-              <input class="text-control success" type="text" id="first" name="first" minlength="2" /><br>
+              <input class="text-control success" type="text" id="first" name="first" minlength="2"
+                placeholder="Prénom" /><br>
             </div>
             <!-- LAST NAME -->
             <div class="formData" data-error="Vous devez entrer 2 caractères ou plus." data-error-visible="false">
               <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="last" name="last" /><br>
+              <input class="text-control" type="text" id="last" name="last" placeholder="Nom" /><br>
             </div>
             <!-- EMAIL -->
             <div class="formData" data-error="Vous devez entrer une adresse email valide." data-error-visible="false">
               <label for="email">E-mail</label><br>
-              <input class="text-control" type="email" id="email" name="email" /><br>
+              <input class="text-control" type="email" id="email" name="email" placeholder="exemple@email.com" /><br>
             </div>
             <!-- BIRTHDATE -->
-            <div class="formData" data-error="Vous devez entre votre date de naissance." data-error-visible="false">
+            <div class="formData" data-error="Vous devez entrer votre date de naissance." data-error-visible="false">
               <label for="birthdate">Date de naissance</label><br>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" /><br>
+              <input class="text-control" type="date" id="birthdate" name="birthdate" placeholder="jj/mm/aaaa" /><br>
             </div>
             <!-- TOURNAMENTS -->
             <div class="formData" data-error="Veuillez saisir une valeur numérique." data-error-visible="false">
               <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
-              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
+              <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99" placeholder="0">
             </div>
             <!-- LOCATIONS -->
             <p class="text-label">Quelles villes ?</p>
             <div class="formData" id="allLocations" data-error="Veuillez sélectionner une ville."
               data-error-visible="false">
-              <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" />
+              <input class="checkbox-input" type="checkbox" id="location1" name="location" value="New York" />
               <label class="checkbox-label" for="location1">
                 <span class="checkbox-icon"></span>
                 New York</label>
-              <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" />
+              <input class="checkbox-input" type="checkbox" id="location2" name="location" value="San Francisco" />
               <label class="checkbox-label" for="location2">
                 <span class="checkbox-icon"></span>
                 San Francisco</label>
-              <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+              <input class="checkbox-input" type="checkbox" id="location3" name="location" value="Seattle" />
               <label class="checkbox-label" for="location3">
                 <span class="checkbox-icon"></span>
                 Seattle</label>
-              <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+              <input class="checkbox-input" type="checkbox" id="location4" name="location" value="Chicago" />
               <label class="checkbox-label" for="location4">
                 <span class="checkbox-icon"></span>
                 Chicago</label>
-              <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+              <input class="checkbox-input" type="checkbox" id="location5" name="location" value="Boston" />
               <label class="checkbox-label" for="location5">
                 <span class="checkbox-icon"></span>
                 Boston</label>
-              <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" />
+              <input class="checkbox-input" type="checkbox" id="location6" name="location" value="Portland" />
               <label class="checkbox-label" for="location6">
                 <span class="checkbox-icon"></span>
                 Portland</label>
@@ -154,6 +155,8 @@
     </p>
   </footer>
   <script src="js/modal.js"></script>
+  <script src="js/formFieldsValidation.js"></script>
+  <script src="js/submittedConfirmation.js"></script>
 </body>
 
 </html>

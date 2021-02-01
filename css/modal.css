@@ -115,7 +115,7 @@ main {
 }
 
 /* Modal form */
-.btn-submit{
+.btn-submit {
   background: #fe142f;
   margin-top: 0.5em;
   padding: 1em;
@@ -202,10 +202,6 @@ input {
 
 .formData[data-error-visible="true"]::after {
   opacity: 1;
-}
-
-.formData[data-error-visible="true"] .text-control {
-  border: 2px solid #e54858;
 }
 
 input[data-error]::after {
