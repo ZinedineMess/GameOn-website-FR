@@ -9,11 +9,12 @@ const locations = document.querySelectorAll('#allLocations .checkbox-input');
 const checkbox1 = document.getElementById('checkbox1');
 const input = document.getElementsByClassName('text-control');
 const form = document.getElementById('form');
+const regex = /^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/;
 
 // ------ FORM FIELDS VALIDATION ------ //
 // NAMES CHECK (FIRST NAME AND LAST NAME)
 function checkFirstName() {
-    if (firstName.value.trim().length < 2 || first.value.trim() === '') {
+    if (firstName.value.trim().length < 2 || first.value.trim() === '' || !firstName.value.match(regex)) {
         firstName.parentElement.setAttribute('data-error-visible', 'true');
         firstName.style.border = '2px solid #e54858';
         return false;
@@ -24,7 +25,7 @@ function checkFirstName() {
 }
 
 function checkLastName() {
-    if (lastName.value.trim().length < 2 || last.value.trim() === "") {
+    if (lastName.value.trim().length < 2 || last.value.trim() === "" || !lastName.value.match(regex)) {
         lastName.parentElement.setAttribute('data-error-visible', 'true');
         lastName.style.border = '2px solid #e54858';
         return false;
